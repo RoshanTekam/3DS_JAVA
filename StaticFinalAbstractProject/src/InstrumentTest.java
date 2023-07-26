@@ -13,7 +13,7 @@ public class InstrumentTest {
 		Violin violin = new Violin();
 		violin.use();
 		violin.tuneStrings();
-		violin.play();
+		violin.play();  
 		violin.bow();
 		
 		
