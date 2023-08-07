@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>title taking from controller</title>
+
+</head>
+<body>
+	<section>
+		<ul class="navbar">
+			<li class="nav-item"><a href="#">Home</a></li>
+			<li class="nav-item"><a href="#">My Crops</a></li>
+			<li class="nav-item"><a th:href="@{/api/farmers/addCrop}">Add
+					Crop for Bidding</a></li>
+			<li class="nav-item"><a href="#">Settings</a></li>
+			<li class="nav-item"><a href="#">Logout</a></li>
+		</ul>
+
+		<h1>Welcome, Farmer!</h1>
+		<h2>Add Crop Details for Bidding</h2>
+
+		<form th:action="@{/add-crop}" method="post">
+			<!-- Your form inputs as before -->
+			<!-- ... -->
+			<button type="submit">Add Crop for Bidding</button>
+		</form>
+	</section>
+</body>
+</html>
